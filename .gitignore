@@ -1,7 +1,67 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ==============================
+# OS & IDE
+# ==============================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# dependencies
-/node_modules
+# ==============================
+# Environment Variables
+# ==============================
+.env
+.env.*
+!.env.example
+!.env.template
+db.env
+client/.env
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local
+server/.env
+
+# ==============================
+# Client (Next.js / Node.js)
+# ==============================
+client/node_modules/
+node_modules/
+client/.next/
+/.next/
+client/out/
+/out/
+client/build/
+/build/
+client/.turbo/
+.turbo/
+
+# Testing (Client)
+client/coverage/
+/coverage/
+
+# Debug (Client)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+
+# Typescript (Client)
+client/*.tsbuildinfo
+*.tsbuildinfo
+next-env.d.ts
+
+# Yarn / PNP
 /.pnp
 .pnp.*
 .yarn/*
@@ -10,32 +70,63 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
+# Vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# ==============================
+# Server (Python / FastAPI)
+# ==============================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+server/.venv/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# C / Extensions
+*.so
+
+# Distribution / packaging
+server/dist/
+server/build/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Unit test / coverage reports
+.htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+server/pytest.xml
+
+# Log files
+*.log
+server/logs/
+
+# SQLite databases (if used locally)
+*.sqlite3
+*.db
+server/todo.db
+
+# ==============================
+# Docker & Infra
+# ==============================
+postgres_data/
+docker-volume-data/
