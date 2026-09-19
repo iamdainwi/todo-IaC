@@ -12,21 +12,24 @@ A sleek, minimal task management application built to demonstrate a multi-contai
 This project leverages a modern, full-stack ecosystem:
 
 ### Frontend (`/client`)
-*   **Framework:** [Next.js 16](https://nextjs.org/) (React)
-*   **Styling:** Tailwind CSS with custom `oklch` theming
-*   **Components:** Custom Shadcn UI implementation
-*   **Typography:** JetBrains Mono (monospaced design)
-*   **HTTP Client:** Axios
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (React)
+- **Styling:** Tailwind CSS with custom `oklch` theming
+- **Components:** Custom Shadcn UI implementation
+- **Typography:** JetBrains Mono (monospaced design)
+- **HTTP Client:** Axios
 
 ### Backend (`/server`)
-*   **Framework:** [FastAPI](https://fastapi.tiangolo.com/) (Python)
-*   **ORM / Database:** SQLAlchemy & Psycopg2
-*   **Data Validation:** Pydantic
+
+- **Framework:** [FastAPI](https://fastapi.tiangolo.com/) (Python)
+- **ORM / Database:** SQLAlchemy & Psycopg2
+- **Data Validation:** Pydantic
 
 ### Infrastructure & Database
-*   **Database:** PostgreSQL 16 (Alpine)
-*   **Reverse Proxy:** Nginx (Alpine)
-*   **Containerization:** Docker & Docker Compose
+
+- **Database:** PostgreSQL 16 (Alpine)
+- **Reverse Proxy:** Nginx (Alpine)
+- **Containerization:** Docker & Docker Compose
 
 ---
 
@@ -58,14 +61,16 @@ Follow these instructions to get a copy of the project up and running on your lo
 ### Prerequisites
 
 Ensure you have the following installed on your machine:
-*   [Docker](https://docs.docker.com/get-docker/)
-*   [Docker Compose](https://docs.docker.com/compose/install/)
+
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
 ### Installation & Execution
 
 1.  **Clone the repository** (if you haven't already):
+
     ```bash
-    git clone <your-repo-url>
+    git clone https://github.com/iamdainwi/todo-IaC.git
     cd todo
     ```
 
@@ -77,16 +82,16 @@ Ensure you have the following installed on your machine:
     ```bash
     docker compose up --build
     ```
-    *Add the `-d` flag to run the containers in detached mode (background).*
+    _Add the `-d` flag to run the containers in detached mode (background)._
 
 ### Accessing the Services
 
 Once the containers are successfully running, you can access the services at the following URLs:
 
-*   **Frontend (Next.js):** [http://localhost:3000](http://localhost:3000)
-*   **Backend API (FastAPI):** [http://localhost:8000](http://localhost:8000)
-*   **API Documentation (Swagger UI):** [http://localhost:8000/docs](http://localhost:8000/docs)
-*   **Nginx Proxy:** [http://localhost:80](http://localhost:80)
+- **Frontend (Next.js):** [http://localhost:3000](http://localhost:3000)
+- **Backend API (FastAPI):** [http://localhost:8000](http://localhost:8000)
+- **API Documentation (Swagger UI):** [http://localhost:8000/docs](http://localhost:8000/docs)
+- **Nginx Proxy:** [http://localhost:80](http://localhost:80)
 
 ---
 
@@ -109,9 +114,10 @@ docker compose down -v
 ## 🎨 Design Philosophy
 
 The frontend was designed with a "physical paper list" aesthetic in mind. It explicitly rejects the common rounded-card/drop-shadow aesthetic in favor of:
-*   A flat list with hairline rules.
-*   A strict monochromatic base (Ink & Paper) with a single, highly deliberate **Canary Yellow** accent.
-*   Monospaced typography (JetBrains Mono) that treats every task with equal weight.
+
+- A flat list with hairline rules.
+- A strict monochromatic base (Ink & Paper) with a single, highly deliberate **Canary Yellow** accent.
+- Monospaced typography (JetBrains Mono) that treats every task with equal weight.
 
 ---
 
